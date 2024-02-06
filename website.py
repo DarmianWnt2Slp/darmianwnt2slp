@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-page = st.sidebar.radio("首页",["简介","汉化作品","英汉词典","赞助区","照片处理","留言区","每日一问"])
+page = st.sidebar.radio("首页",["简介","汉化作品","英汉词典","赞助区","照片处理","留言区","每日一问","问卷调查"])
 
 # 图像处理
 def img_change(img, rc, gc, bc):
@@ -17,7 +17,7 @@ def img_change(img, rc, gc, bc):
 
 # 1-1
 def page1():
-    st.write(":red[啥也没写doge]")
+    st.write(":red[欢迎来到我的网站！在这里请文明使用每一项功能，感谢您的配合！！]")
 
 
 #1-2
@@ -180,6 +180,35 @@ def page7():
         else:
             st.write("Wrong!")
 
+def page8():
+    st.write("1.您对本网页资源配置的满意程度")
+    col1, col2 = st.columns([1,1])
+    col3, col4 = st.columns([1,1])
+    with col1:
+        cb1 = st.checkbox("A.非常满意")
+    with col2:
+        cb2 = st.checkbox("B.满意")
+    with col3:
+        cb3 = st.checkbox("C.一般")
+    with col4:
+        cb4 = st.checkbox("D.不满意")
+    st.write("\n")
+    st.write("2.您对本网页服务质量的满意程度")
+    col11, col22 = st.columns([1,1])
+    col33, col44 = st.columns([1,1])
+    with col11:
+        cb11 = st.checkbox("A.非常满意")
+    with col22:
+        cb22 = st.checkbox("B.满意")
+    with col33:
+        cb33 = st.checkbox("C.一般")
+    with col44:
+        cb44 = st.checkbox("D.不满意")
+    st.write("\n")
+    b1 = st.button("提交反馈")
+    if b1:
+        st.write("提交成功！")
+
 if page == "简介":
     page1()
 elif page == "汉化作品":
@@ -194,3 +223,5 @@ elif page == "留言区":
     page6()
 elif page == "每日一问":
     page7()
+elif page == "问卷调查":
+    page8()
