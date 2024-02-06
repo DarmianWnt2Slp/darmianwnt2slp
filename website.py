@@ -192,19 +192,19 @@ def page8():
         cb3 = st.checkbox("C.一般")
     with col4:
         cb4 = st.checkbox("D.不满意")
-    st.write("\n")
+    st.write("--------------------------------------------------------------------------------------------------------------")
     st.write("2.您对本网页服务质量的满意程度")
-    col11, col22 = st.columns([1,1])
-    col33, col44 = st.columns([1,1])
-    with col11:
-        cb11 = st.checkbox("A.非常满意")
-    with col22:
-        cb22 = st.checkbox("B.满意")
-    with col33:
-        cb33 = st.checkbox("C.一般")
-    with col44:
-        cb44 = st.checkbox("D.不满意")
-    st.write("\n")
+    col5, col6 = st.columns([1,1])
+    col7, col8 = st.columns([1,1])
+    with col5:
+        cb5 = st.checkbox("A.非常满意")
+    with col6:
+        cb6 = st.checkbox("B.满意")
+    with col7:
+        cb7 = st.checkbox("C.一般")
+    with col8:
+        cb8 = st.checkbox("D.不满意")
+    st.write("--------------------------------------------------------------------------------------------------------------")
     b1 = st.button("提交反馈")
     if b1:
         st.write("提交成功！")
