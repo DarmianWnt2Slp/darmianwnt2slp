@@ -17,7 +17,7 @@ def img_change(img, rc, gc, bc):
 
 # 1-1
 def page1():
-    st.write(":red[欢迎来到我的网站！在这里请文明使用每一项功能，感谢您的配合！！]")
+    st.write(":red[欢迎来到我的网站！请在这里文明使用每一项功能，感谢您的配合！！----网站创建者]")
 
 
 #1-2
@@ -26,17 +26,34 @@ def page2():
         bgm = f.read()
     tab1, tab2, tab3, tab4 = st.tabs([":green[Las Monjas]",":red[The Other Roles]",":orange[Town Of Us]","Town Of Host"])
     with tab1:
+        st.write("整活の小曲👇")
         st.audio(bgm, format = "mp3", start_time = 0)
         st.write(":green[Las Monjas v3.7.1]")
         st.link_button('下载链接', 'https://www.baidu.com/')
         st.write(":green[Las Monjas v3.7.0]")
+        st.link_button('下载链接', 'https://www.baidu.com/')
         st.write(":green[Las Monjas v3.6.0]")
+        st.link_button('下载链接', 'https://www.baidu.com/')
     with tab2:
-        pass
+        st.write("整活の小曲👇")
+        st.audio(bgm, format = "mp3", start_time = 0)
+        st.write(":red[The Other Roles v3.5.5]")
+        st.link_button('下载链接', 'https://www.baidu.com/')
+        st.write(":red[The Other Roles v3.5.4]")
+        st.link_button('下载链接', 'https://www.baidu.com/')
+        st.write(":red[The Other Roles v3.4.0]")
+        st.link_button('下载链接', 'https://www.baidu.com/')
     with tab3:
-        pass
+        st.write("整活の小曲👇")
+        st.audio(bgm, format = "mp3", start_time = 0)
+        st.write(":orange[Town Of Us v1.0.0]")
+        st.link_button('下载链接', 'https://www.baidu.com/')
     with tab4:
-        pass
+        st.write("整活の小曲👇")
+        st.audio(bgm, format = "mp3", start_time = 0)
+        st.write(":red[Town Of Host v4.3.1]")
+        st.link_button('下载链接', 'https://www.baidu.com/')
+        st.write("Town Of Host v4.2.6")
 
 #1-3
 def page3():
@@ -181,7 +198,8 @@ def page7():
             st.write("Wrong!")
 
 def page8():
-    st.write("1.您对本网页资源配置的满意程度")
+    st.write("🐶带*号为必填🐶")
+    st.write(:red["*"]+"1.您对本网页资源配置的满意程度")
     col1, col2 = st.columns([1,1])
     col3, col4 = st.columns([1,1])
     with col1:
@@ -192,8 +210,11 @@ def page8():
         cb3 = st.checkbox("C.一般")
     with col4:
         cb4 = st.checkbox("D.不满意")
+    st.write("--------------------------------------------------------------")
+    st.write(:red["*"] + "2.您对本网页服务质量的发展和完善有什么建议？")
+     tb1 = st.text_box("请输入建议")
 
-    if cb1 or cb2 or cb3 or cb4:
+    if cb1 or cb2 or cb3 or cb4 and tb1:
         b1 = st.button("提交反馈")
         if b1:
             st.write("提交成功！")
