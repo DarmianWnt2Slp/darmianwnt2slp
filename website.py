@@ -162,20 +162,20 @@ def page6():
             f.write(message)
 
 def page7():
-    st.write("下面哪个小程序可以嵌入网页中？")
+    st.write("下面哪个库不是python内置库？")
     col1, col2 = st.columns([1,1])
     col3, col4 = st.columns([1,1])
     with col1:
-        cb1 = st.checkbox("A")
+        cb1 = st.checkbox("A.turtle")
     with col2:
-        cb2 = st.checkbox("B")
+        cb2 = st.checkbox("B.pygame")
     with col3:
-        cb3 = st.checkbox("C")
+        cb3 = st.checkbox("C.arcade")
     with col4:
-        cb4 = st.checkbox("D")
+        cb4 = st.checkbox("D.matplotlib")
     b1 = st.button("提交答案") 
     if b1:
-        if cb1 == False and cb2 == True and cb3 == False and cb4 == False:
+        if cb1 == False and cb2 == False and cb3 == True and cb4 == False:
             st.write("Correct!")
         else:
             st.write("Wrong!")
