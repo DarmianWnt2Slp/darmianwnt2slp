@@ -193,9 +193,10 @@ def page8():
     with col4:
         cb4 = st.checkbox("D.不满意")
 
-    b1 = st.button("提交反馈")
-    if b1:
-        st.write("提交成功！")
+    if cb1 or cb2 or cb3 or cb4:
+        b1 = st.button("提交反馈")
+        if b1:
+            st.write("提交成功！")
 
 if page == "简介":
     page1()
