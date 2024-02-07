@@ -212,7 +212,7 @@ def page8():
         cb4 = st.checkbox("D.不满意")
     st.write("--------------------------------------------------------------")
     st.write(":red["*"]" + "2.您对本网页服务质量的发展和完善有什么建议？")
-     tb1 = st.text_box("请输入建议")
+    tb1 = st.text_box("请输入建议")
 
     if cb1 or cb2 or cb3 or cb4 and tb1:
         b1 = st.button("提交反馈")
